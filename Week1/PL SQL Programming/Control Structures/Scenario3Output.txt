@@ -1,0 +1,13 @@
+Reminder: Dear Ramesh, your Loan ID 101 is due on 06-JUL-2026
+Reminder: Dear Suresh, your Loan ID 102 is due on 11-JUL-2026
+Reminder: Dear Anita, your Loan ID 103 is due on 16-JUL-2026
+Reminder: Dear Priya, your Loan ID 104 is due on 21-JUL-2026
+Reminder: Dear Rajesh, your Loan ID 105 is due on 24-JUL-2026
+Reminder: Dear Kiran, your Loan ID 106 is due on 01-JUL-2026
+Reminder: Dear Sunita, your Loan ID 107 is due on 08-JUL-2026
+Reminder: Dear Vijay, your Loan ID 108 is due on 14-JUL-2026
+Reminder: Dear Deepa, your Loan ID 109 is due on 18-JUL-2026
+Reminder: Dear Arjun, your Loan ID 110 is due on 26-JUL-2026
+
+
+PL/SQL procedure successfully completed.
