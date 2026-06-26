@@ -1,0 +1,37 @@
+Procedure PROCESSMONTHLYINTEREST compiled
+
+Monthly interest (1%) applied to all savings accounts.
+
+
+PL/SQL procedure successfully completed.
+
+
+ ACCOUNTID CUSTOMERID ACCOUNTTYPE             BALANCE LASTMODIFIED      
+---------- ---------- -------------------- ---------- ------------------
+         1        201 Savings                 12241.2 26-JUN-26         
+         2        202 Checking                   9000 26-JUN-26         
+         3        203 Savings                 18361.8 26-JUN-26         
+         4        204 Checking                   7500 26-JUN-26         
+         5        205 Savings                 22442.2 26-JUN-26         
+         6        206 Checking                  11000 26-JUN-26         
+         7        207 Savings                14791.45 26-JUN-26         
+         8        208 Checking                   6500 26-JUN-26         
+         9        209 Savings                 27542.7 26-JUN-26         
+        10        210 Checking                   8000 26-JUN-26         
+        11        211 Savings                 35703.5 26-JUN-26         
+        12        212 Checking                   9500 26-JUN-26         
+        13        213 Savings                 16321.6 26-JUN-26         
+        14        214 Checking                   7000 26-JUN-26         
+        15        215 Savings                 24482.4 26-JUN-26         
+        16        216 Checking                  12000 26-JUN-26         
+        17        217 Savings                 31623.1 26-JUN-26         
+        18        218 Checking                   8500 26-JUN-26         
+        19        219 Savings                   40804 26-JUN-26         
+        20        220 Checking                  10000 26-JUN-26         
+        21        221 Savings                 28562.8 26-JUN-26         
+        22        222 Checking                   9200 26-JUN-26         
+        23        223 Savings                 19381.9 26-JUN-26         
+        24        224 Checking                   7800 26-JUN-26         
+        25        225 Savings                 33663.3 26-JUN-26         
+
+25 rows selected. 
