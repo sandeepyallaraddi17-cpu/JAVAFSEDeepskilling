@@ -1,0 +1,18 @@
+Procedure UPDATEEMPLOYEEBONUS compiled
+
+Bonus of 10% applied to IT department.
+
+
+PL/SQL procedure successfully completed.
+
+EMPLOYEEID|NAME|POSITION|SALARY|DEPARTMENT|HIREDATE
+1|Arav|Team Lead|79200|IT|12-MAR-16
+3|Chirag|Software Engineer|67100|IT|25-JAN-18
+7|Gautam|Project Manager|89100|IT|03-DEC-14
+9|Ishaan|Software Engineer|69300|IT|11-AUG-19
+13|Manish|Software Engineer|71500|IT|09-JAN-20
+17|Raghav|Software Architect|99000|IT|07-APR-13
+21|Vaishnavi|Software Engineer|68200|IT|12-DEC-18
+22|Yogesh|Project Manager|93500|IT|29-JAN-14
+
+8 rows selected. 
