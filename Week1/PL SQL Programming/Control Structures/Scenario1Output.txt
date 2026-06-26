@@ -1,0 +1,12 @@
+1% discount applied to Ramesh (Customer ID: 1, Age: 76)
+1% discount applied to Anita (Customer ID: 3, Age: 70)
+1% discount applied to Rajesh (Customer ID: 5, Age: 65)
+1% discount applied to Sunita (Customer ID: 7, Age: 67)
+1% discount applied to Deepa (Customer ID: 9, Age: 63)
+1% discount applied to Manoj (Customer ID: 12, Age: 73)
+1% discount applied to Meera (Customer ID: 15, Age: 69)
+1% discount applied to Rohit (Customer ID: 18, Age: 62)
+1% discount applied to Lakshmi (Customer ID: 21, Age: 74)
+
+
+PL/SQL procedure successfully completed.
