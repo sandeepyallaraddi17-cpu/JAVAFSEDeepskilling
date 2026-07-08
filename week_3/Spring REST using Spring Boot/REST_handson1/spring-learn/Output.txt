@@ -1,0 +1,11 @@
+#Hello World REST Service
+
+Application started successfully.
+
+Tomcat started on port(s): 8083 (http)
+
+URL:
+http://localhost:8083/hello
+
+Output:
+Hello World!!
