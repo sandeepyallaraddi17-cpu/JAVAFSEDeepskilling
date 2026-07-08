@@ -1,0 +1,19 @@
+Spring Boot :: (v4.1.1-SNAPSHOT)
+
+INFO  --- Starting SpringLearnApplication
+INFO  --- Tomcat started on port 8080 (http)
+INFO  --- Started SpringLearnApplication
+
+INFO  --- START
+
+DEBUG --- Inside Country Constructor.
+DEBUG --- Inside setCode()
+DEBUG --- Inside setName()
+DEBUG --- Country : Country [code=IN, name=India]
+
+INFO  --- END
+
+Application executed successfully.
+
+Country bean was successfully loaded from country.xml using Spring IoC Container.
+The Country object was created, the properties 'code' and 'name' were injected through setter methods, and the bean details were displayed successfully.
