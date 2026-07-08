@@ -1,0 +1,31 @@
+JWT Authentication Service Output
+
+Application Name: jwt-handson
+
+URL:
+http://localhost:8080/authenticate
+
+Authentication:
+HTTP Basic Authentication
+
+Username: user
+Password: pwd
+
+Request:
+GET /authenticate
+
+Response:
+
+{
+  "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzgzNTM1MTgxfQ.NR2IHUT8eQLJa7lHWYUPNtO5hp7CWM3vqlUJHyGBlek"
+}
+
+Description:
+• The service accepts a GET request at /authenticate.
+• Spring Security authenticates the user using HTTP Basic Authentication.
+• The Authorization header is decoded to retrieve the username and password.
+• A JWT token is generated using the authenticated username.
+• The generated JWT token is returned in JSON format.
+
+Result:
+JWT Authentication Service executed successfully.
