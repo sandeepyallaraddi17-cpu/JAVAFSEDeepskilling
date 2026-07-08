@@ -13,3 +13,21 @@ BUILD SUCCESSFUL
 
 Application executed successfully.
 Spring Boot application started successfully using the embedded Tomcat server.
+
+#Purpose of @SpringBootApplication Annotation
+
+@SpringBootApplication is the main annotation used in a Spring Boot application.
+It is placed on the main class to enable Spring Boot features.
+
+It is a combination of the following three annotations:
+
+1. @Configuration
+   - Marks the class as a source of Spring bean definitions.
+
+2. @EnableAutoConfiguration
+   - Automatically configures the Spring application based on the dependencies present in the project.
+
+3. @ComponentScan
+   - Scans the current package and its sub-packages to detect Spring components such as @Controller, @Service, @Repository, and @Component.
+
+In this project, @SpringBootApplication simplifies the application setup by combining these three annotations into a single annotation and starts the Spring Boot application.
