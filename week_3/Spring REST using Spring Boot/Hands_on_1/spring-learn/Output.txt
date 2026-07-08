@@ -1,0 +1,15 @@
+Spring Boot :: (v4.1.1-SNAPSHOT)
+
+2026-07-08T13:04:45.471+05:30  INFO --- Starting SpringLearnApplication using Java 21.0.7
+2026-07-08T13:04:45.475+05:30  INFO --- No active profile set, falling back to default profile: "default"
+2026-07-08T13:04:46.333+05:30  INFO --- Tomcat initialized with port 8080 (http)
+2026-07-08T13:04:46.350+05:30  INFO --- Starting service [Tomcat]
+2026-07-08T13:04:46.350+05:30  INFO --- Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-08T13:04:46.391+05:30  INFO --- Root WebApplicationContext: initialization completed
+2026-07-08T13:04:46.770+05:30  INFO --- Tomcat started on port 8080 (http) with context path '/'
+2026-07-08T13:04:46.776+05:30  INFO --- Started SpringLearnApplication in 1.744 seconds
+
+BUILD SUCCESSFUL
+
+Application executed successfully.
+Spring Boot application started successfully using the embedded Tomcat server.
