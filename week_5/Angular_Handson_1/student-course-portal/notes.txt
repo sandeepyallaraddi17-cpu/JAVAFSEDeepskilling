@@ -1,0 +1,44 @@
+angular.json
+- Configuration file for the Angular workspace, including build, serve, and project settings.
+
+tsconfig.json
+- Main TypeScript configuration file.
+
+tsconfig.app.json
+- TypeScript configuration for the Angular application.
+
+package.json
+- Contains project metadata, dependencies, and npm scripts.
+
+src/main.ts
+- Entry point of the Angular application.
+
+src/app/app.config.ts
+- Configures providers and routing for the standalone Angular application.
+
+src/app/app.component.ts
+- Defines the root component of the Angular application.
+
+src/index.html
+- Main HTML page that hosts the Angular application.
+
+dist/
+- Contains the production-ready build output.
+
+main-*.js
+- Contains the compiled Angular application code.
+
+Budgets Configuration
+
+maximumWarning (500kB)
+- Angular displays a warning if the initial application bundle exceeds 500kB.
+
+maximumError (1MB)
+- Angular stops the build with an error if the initial application bundle exceeds 1MB.
+
+anyComponentStyle maximumWarning (4kB)
+- Angular displays a warning if a component's CSS exceeds 4kB.
+
+anyComponentStyle maximumError (8kB)
+- Angular stops the build if a component's CSS exceeds 8kB.
+
