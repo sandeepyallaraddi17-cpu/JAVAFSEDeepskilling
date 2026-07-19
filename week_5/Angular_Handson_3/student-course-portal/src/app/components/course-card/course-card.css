@@ -1,0 +1,13 @@
+.card-enrolled{
+background:#e8ffe8;
+padding:15px;
+margin:10px;
+}
+
+.card-full{
+border:3px solid blue;
+}
+
+.expanded{
+min-height:220px;
+}
