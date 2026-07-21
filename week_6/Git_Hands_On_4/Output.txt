@@ -1,0 +1,2 @@
+PS C:\Users\sande\JAVAFSEDeepskilling\week_6\Git_Hands_On_4> git log --oneline --graph --decorate --all
+* fb93edc (HEAD -> main) Resolved merge conflict between master and GitWork branches
