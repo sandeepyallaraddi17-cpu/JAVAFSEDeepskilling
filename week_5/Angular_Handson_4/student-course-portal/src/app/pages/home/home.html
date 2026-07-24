@@ -1,0 +1,34 @@
+<h1>{{ portalName }}</h1>
+
+<p *ngIf="isLoading">
+  Loading courses...
+</p>
+
+<div *ngIf="!isLoading">
+
+  <p>Manage your courses, track your progress, and view your profile.</p>
+
+  <p><strong>Courses Available:</strong> {{ availableCourses }}</p>
+  <p><strong>Enrolled:</strong> 3</p>
+  <p><strong>GPA:</strong> 3.8</p>
+
+  <button
+    [disabled]="!isPortalActive"
+    (click)="onEnrollClick()">
+    Enroll Now
+  </button>
+
+  <p>{{ message }}</p>
+
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Search course">
+
+  <p>Searching for: {{ searchTerm }}</p>
+
+</div>
+
+<hr>
+
+<app-course-list></app-course-list>
