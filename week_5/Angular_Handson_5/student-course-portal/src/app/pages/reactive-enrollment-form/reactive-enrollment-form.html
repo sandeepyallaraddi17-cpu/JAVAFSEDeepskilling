@@ -1,0 +1,281 @@
+<div class="enrollment-card">
+
+  <div class="form-header">
+    <h2>Reactive Student Enrollment</h2>
+    <p>Enter student details and additional courses below</p>
+  </div>
+
+  <form [formGroup]="enrollForm" (ngSubmit)="onSubmit()">
+
+    <!-- Student Name -->
+    <div class="form-group">
+      <label for="studentName">Student Name</label>
+
+      <input
+        id="studentName"
+        type="text"
+        formControlName="studentName"
+        placeholder="Enter student name"
+      />
+
+      @if (
+        enrollForm.get('studentName')?.touched &&
+        enrollForm.get('studentName')?.hasError('required')
+      ) {
+        <div class="error-message">
+          Student name is required.
+        </div>
+      }
+
+      @if (
+        enrollForm.get('studentName')?.touched &&
+        enrollForm.get('studentName')?.hasError('minlength')
+      ) {
+        <div class="error-message">
+          Student name must contain at least 3 characters.
+        </div>
+      }
+    </div>
+
+
+    <!-- Student Email -->
+    <div class="form-group">
+      <label for="studentEmail">Student Email</label>
+
+      <input
+        id="studentEmail"
+        type="email"
+        formControlName="studentEmail"
+        placeholder="Enter student email"
+      />
+
+      @if (
+        enrollForm.get('studentEmail')?.touched &&
+        enrollForm.get('studentEmail')?.hasError('required')
+      ) {
+        <div class="error-message">
+          Student email is required.
+        </div>
+      }
+
+      @if (
+        enrollForm.get('studentEmail')?.touched &&
+        enrollForm.get('studentEmail')?.hasError('email')
+      ) {
+        <div class="error-message">
+          Enter a valid email address.
+        </div>
+      }
+
+      @if (enrollForm.get('studentEmail')?.pending) {
+        <div class="checking-message">
+          Checking email...
+        </div>
+      }
+
+      @if (
+        enrollForm.get('studentEmail')?.touched &&
+        enrollForm.get('studentEmail')?.hasError('emailTaken')
+      ) {
+        <div class="error-message">
+          Email taken
+        </div>
+      }
+    </div>
+
+
+    <!-- Course ID -->
+    <div class="form-group">
+      <label for="courseId">Course ID</label>
+
+      <input
+        id="courseId"
+        type="text"
+        formControlName="courseId"
+        placeholder="Example: CS101"
+      />
+
+      @if (
+        enrollForm.get('courseId')?.touched &&
+        enrollForm.get('courseId')?.hasError('required')
+      ) {
+        <div class="error-message">
+          Course ID is required.
+        </div>
+      }
+
+      @if (
+        enrollForm.get('courseId')?.touched &&
+        enrollForm.get('courseId')?.hasError('noCourseCode')
+      ) {
+        <div class="error-message">
+          Course ID cannot start with XX.
+        </div>
+      }
+    </div>
+
+
+    <!-- Preferred Semester -->
+    <div class="form-group">
+      <label for="preferredSemester">Preferred Semester</label>
+
+      <select
+        id="preferredSemester"
+        formControlName="preferredSemester"
+      >
+        <option value="">Select Semester</option>
+        <option value="Odd">Odd</option>
+        <option value="Even">Even</option>
+      </select>
+
+      @if (
+        enrollForm.get('preferredSemester')?.touched &&
+        enrollForm.get('preferredSemester')?.hasError('required')
+      ) {
+        <div class="error-message">
+          Preferred semester is required.
+        </div>
+      }
+    </div>
+
+
+    <!-- Terms -->
+    <div class="terms-group">
+
+      <input
+        id="agreeToTerms"
+        type="checkbox"
+        formControlName="agreeToTerms"
+      />
+
+      <label for="agreeToTerms">
+        I agree to the terms and conditions
+      </label>
+
+    </div>
+
+    @if (
+      enrollForm.get('agreeToTerms')?.touched &&
+      enrollForm.get('agreeToTerms')?.invalid
+    ) {
+      <div class="error-message terms-error">
+        You must agree to the terms.
+      </div>
+    }
+
+
+    <!-- Additional Courses -->
+    <div class="courses-section">
+
+      <div class="courses-header">
+
+        <div>
+          <h3>Additional Courses</h3>
+          <p>Add any additional courses for enrollment</p>
+        </div>
+
+        <button
+          type="button"
+          class="add-button"
+          (click)="addCourse()"
+        >
+          + Add Another Course
+        </button>
+
+      </div>
+
+
+      <div formArrayName="additionalCourses">
+
+        @if (additionalCourses.length === 0) {
+
+          <div class="empty-courses">
+            No additional courses added. Click Add Another Course to add one.
+          </div>
+
+        }
+
+
+        @for (
+          course of additionalCourses.controls;
+          track $index;
+          let i = $index
+        ) {
+
+          <div
+            class="course-item"
+            [formGroupName]="i"
+          >
+
+            <div class="course-row">
+
+              <input
+                type="text"
+                formControlName="courseId"
+                placeholder="Enter Course ID"
+              />
+
+              <button
+                type="button"
+                class="remove-button"
+                (click)="removeCourse(i)"
+              >
+                Remove
+              </button>
+
+            </div>
+
+
+            @if (
+              course.get('courseId')?.touched &&
+              course.get('courseId')?.hasError('required')
+            ) {
+              <div class="error-message">
+                Course ID is required.
+              </div>
+            }
+
+            @if (
+              course.get('courseId')?.touched &&
+              course.get('courseId')?.hasError('noCourseCode')
+            ) {
+              <div class="error-message">
+                Course ID cannot start with XX.
+              </div>
+            }
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+
+    <!-- Submit -->
+    <div class="submit-section">
+
+      <button
+        type="submit"
+        class="submit-button"
+        [disabled]="enrollForm.invalid || enrollForm.pending"
+      >
+        Submit Enrollment
+      </button>
+
+    </div>
+
+
+    <!-- Success -->
+    @if (submitted) {
+
+      <div class="success-message">
+        ✓ Enrollment submitted successfully!
+      </div>
+
+    }
+
+  </form>
+
+</div>
