@@ -1,0 +1,60 @@
+<div class="profile-page">
+
+  <div class="profile-header">
+
+    <h1>Student Profile</h1>
+
+    <p>
+      View your currently enrolled courses
+    </p>
+
+  </div>
+
+
+  <div class="enrollment-summary">
+
+    <span>Enrolled Courses</span>
+
+    <strong>
+      {{ enrolledCourses.length }}
+    </strong>
+
+  </div>
+
+
+  <div
+    class="empty-state"
+    *ngIf="enrolledCourses.length === 0"
+  >
+    You have not enrolled in any courses yet.
+  </div>
+
+
+  <div
+    class="enrolled-list"
+    *ngIf="enrolledCourses.length > 0"
+  >
+
+    <div
+      class="enrolled-course"
+      *ngFor="let course of enrolledCourses"
+    >
+
+      <div>
+        <h3>{{ course.name }}</h3>
+        <span>{{ course.code }}</span>
+      </div>
+
+      <div class="credits">
+        {{ course.credits }} Credits
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <app-notification>
+  </app-notification>
+
+</div>

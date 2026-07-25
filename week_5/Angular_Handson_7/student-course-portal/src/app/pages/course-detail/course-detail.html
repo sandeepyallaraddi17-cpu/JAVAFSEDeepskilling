@@ -1,0 +1,55 @@
+<div class="detail-page">
+
+  @if (course) {
+
+    <div class="detail-card">
+
+      <span class="course-code">
+        {{ course.code }}
+      </span>
+
+      <h1>
+        {{ course.name }}
+      </h1>
+
+      <div class="detail-row">
+        <span>Course ID</span>
+        <strong>{{ course.id }}</strong>
+      </div>
+
+      <div class="detail-row">
+        <span>Credits</span>
+        <strong>{{ course.credits }}</strong>
+      </div>
+
+      <button
+        type="button"
+        (click)="goBack()"
+      >
+        Back to Courses
+      </button>
+
+    </div>
+
+  } @else {
+
+    <div class="detail-card">
+
+      <h2>Course Not Found</h2>
+
+      <p>
+        The requested course could not be found.
+      </p>
+
+      <button
+        type="button"
+        (click)="goBack()"
+      >
+        Back to Courses
+      </button>
+
+    </div>
+
+  }
+
+</div>
