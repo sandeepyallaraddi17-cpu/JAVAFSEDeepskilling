@@ -1,0 +1,41 @@
+.summary-widget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  margin: 20px 0;
+  padding: 16px 18px;
+
+  border: 1px solid #dce2e8;
+  border-radius: 8px;
+
+  background: #f8fafc;
+}
+
+.summary-widget span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #64748b;
+  font-size: 12px;
+}
+
+.summary-widget strong {
+  color: #1f3b5b;
+  font-size: 24px;
+}
+
+.summary-widget button {
+  padding: 9px 14px;
+
+  border: none;
+  border-radius: 5px;
+
+  background: #1f3b5b;
+  color: white;
+
+  cursor: pointer;
+}
