@@ -1,0 +1,61 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "name": "Java",
+      "code": "JAVA101",
+      "credits": 4,
+      "status": "passed"
+    },
+    {
+      "id": "2",
+      "name": "Angular",
+      "code": "ANG201",
+      "credits": 3,
+      "status": "pending"
+    },
+    {
+      "id": "4",
+      "name": "Microservices",
+      "code": "MIC401",
+      "credits": 4,
+      "status": "pending"
+    },
+    {
+      "id": "5",
+      "name": "Database Management",
+      "code": "DBMS501",
+      "credits": 4,
+      "status": "passed"
+    },
+    {
+      "name": "Artificial Intelligence",
+      "code": "AI601",
+      "credits": 4,
+      "status": "pending",
+      "id": "lhhQ3hgD5gU"
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "name": "Sandeep",
+      "email": "sandeep@example.com",
+      "courseId": "1"
+    },
+    {
+      "id": "2",
+      "name": "Rahul",
+      "email": "rahul@example.com",
+      "courseId": "2"
+    },
+    {
+      "id": "3",
+      "name": "Priya",
+      "email": "priya@example.com",
+      "courseId": "2"
+    }
+  ],
+  "enrollments": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

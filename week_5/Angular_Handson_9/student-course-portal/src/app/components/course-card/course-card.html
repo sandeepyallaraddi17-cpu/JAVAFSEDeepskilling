@@ -1,0 +1,192 @@
+<ng-container *ngIf="enrolled$ | async as enrolled; else notEnrolled">
+
+  <div
+    class="course-card"
+    appHighlight
+    [ngClass]="getCardClasses(enrolled)"
+  >
+
+    <div class="card-header">
+      <div>
+
+        <span class="course-code">
+          {{ course.code }}
+        </span>
+
+        <h3>
+          {{ course.name }}
+        </h3>
+
+      </div>
+    </div>
+
+
+    <div class="course-info">
+
+      <div class="info-item">
+        <span class="info-label">
+          Credits
+        </span>
+
+        <span class="info-value">
+          {{ course.credits | creditLabel }}
+        </span>
+      </div>
+
+
+      <div class="info-item">
+        <span class="info-label">
+          Course ID
+        </span>
+
+        <span class="info-value">
+          {{ course.id }}
+        </span>
+      </div>
+
+    </div>
+
+
+    <div
+      class="details-section"
+      *ngIf="isExpanded"
+    >
+
+      <p>
+        <strong>Course:</strong>
+        {{ course.name }}
+      </p>
+
+      <p>
+        <strong>Course Code:</strong>
+        {{ course.code }}
+      </p>
+
+      <p>
+        <strong>Credits:</strong>
+        {{ course.credits | creditLabel }}
+      </p>
+
+    </div>
+
+
+    <div class="card-actions">
+
+      <button
+        type="button"
+        class="details-button"
+        (click)="toggleDetails()"
+      >
+        {{ isExpanded ? 'Hide Details' : 'Show Details' }}
+      </button>
+
+      <button
+        type="button"
+        class="enroll-button"
+        (click)="toggleEnrollment(true)"
+      >
+        Unenroll
+      </button>
+
+    </div>
+
+  </div>
+
+</ng-container>
+
+
+<ng-template #notEnrolled>
+
+  <div
+    class="course-card"
+    appHighlight
+    [ngClass]="getCardClasses(false)"
+  >
+
+    <div class="card-header">
+      <div>
+
+        <span class="course-code">
+          {{ course.code }}
+        </span>
+
+        <h3>
+          {{ course.name }}
+        </h3>
+
+      </div>
+    </div>
+
+
+    <div class="course-info">
+
+      <div class="info-item">
+        <span class="info-label">
+          Credits
+        </span>
+
+        <span class="info-value">
+          {{ course.credits | creditLabel }}
+        </span>
+      </div>
+
+
+      <div class="info-item">
+        <span class="info-label">
+          Course ID
+        </span>
+
+        <span class="info-value">
+          {{ course.id }}
+        </span>
+      </div>
+
+    </div>
+
+
+    <div
+      class="details-section"
+      *ngIf="isExpanded"
+    >
+
+      <p>
+        <strong>Course:</strong>
+        {{ course.name }}
+      </p>
+
+      <p>
+        <strong>Course Code:</strong>
+        {{ course.code }}
+      </p>
+
+      <p>
+        <strong>Credits:</strong>
+        {{ course.credits | creditLabel }}
+      </p>
+
+    </div>
+
+
+    <div class="card-actions">
+
+      <button
+        type="button"
+        class="details-button"
+        (click)="toggleDetails()"
+      >
+        {{ isExpanded ? 'Hide Details' : 'Show Details' }}
+      </button>
+
+      <button
+        type="button"
+        class="enroll-button"
+        (click)="toggleEnrollment(false)"
+      >
+        Enroll
+      </button>
+
+    </div>
+
+  </div>
+
+</ng-template>

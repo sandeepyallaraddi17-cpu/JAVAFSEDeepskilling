@@ -1,0 +1,141 @@
+<div class="detail-page">
+
+  @if (isLoading) {
+
+    <div class="detail-card">
+
+      <h2>
+        Loading course...
+      </h2>
+
+    </div>
+
+  } @else if (course) {
+
+    <div class="detail-card">
+
+      <span class="course-code">
+        {{ course.code }}
+      </span>
+
+      <h1>
+        {{ course.name }}
+      </h1>
+
+
+      <div class="detail-row">
+
+        <span>
+          Course ID
+        </span>
+
+        <strong>
+          {{ course.id }}
+        </strong>
+
+      </div>
+
+
+      <div class="detail-row">
+
+        <span>
+          Credits
+        </span>
+
+        <strong>
+          {{ course.credits }}
+        </strong>
+
+      </div>
+
+
+      <div class="detail-row">
+
+        <span>
+          Status
+        </span>
+
+        <strong>
+          {{ course.status }}
+        </strong>
+
+      </div>
+
+
+      <!-- Step 87 - Students loaded using switchMap -->
+
+      <div class="students-section">
+
+        <h2>
+          Enrolled Students
+        </h2>
+
+
+        @if (students.length > 0) {
+
+          @for (
+            student of students;
+            track student.id
+          ) {
+
+            <div class="student-item">
+
+              <strong>
+                {{ student.name }}
+              </strong>
+
+              <p>
+                {{ student.email }}
+              </p>
+
+            </div>
+
+          }
+
+        } @else {
+
+          <p class="no-students">
+            No students enrolled in this course.
+          </p>
+
+        }
+
+      </div>
+
+
+      <button
+        type="button"
+        (click)="goBack()"
+      >
+        Back to Courses
+      </button>
+
+    </div>
+
+  } @else {
+
+    <div class="detail-card">
+
+      <h2>
+        Course Not Found
+      </h2>
+
+      <p>
+        {{
+          errorMessage ||
+          'The requested course could not be found.'
+        }}
+      </p>
+
+      <button
+        type="button"
+        (click)="goBack()"
+      >
+        Back to Courses
+      </button>
+
+    </div>
+
+  }
+
+</div>

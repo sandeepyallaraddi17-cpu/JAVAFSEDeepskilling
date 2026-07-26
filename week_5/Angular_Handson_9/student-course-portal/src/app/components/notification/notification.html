@@ -1,0 +1,23 @@
+<div class="notification-box">
+
+  <h3>Notifications</h3>
+
+  <p class="notification-info">
+    Component-level notification service is active.
+  </p>
+
+  <button
+    type="button"
+    (click)="addNotification()"
+  >
+    Add Notification
+  </button>
+
+  <div
+    class="notification-message"
+    *ngFor="let message of notificationService.getMessages()"
+  >
+    {{ message }}
+  </div>
+
+</div>
