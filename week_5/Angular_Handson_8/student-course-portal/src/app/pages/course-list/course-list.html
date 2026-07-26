@@ -1,0 +1,146 @@
+<div class="courses-page">
+
+  <div class="courses-header">
+
+    <h1>
+      Available Courses
+    </h1>
+
+    <p>
+      Explore courses available for student enrollment
+    </p>
+
+  </div>
+
+
+  <div class="search-section">
+
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="Search by course name or code"
+      (keyup.enter)="searchCourses()"
+    >
+
+    <button
+      type="button"
+      class="search-button"
+      (click)="searchCourses()"
+    >
+      Search
+    </button>
+
+    <button
+      type="button"
+      class="clear-button"
+      (click)="clearSearch()"
+    >
+      Clear
+    </button>
+
+  </div>
+
+
+  @if (isLoading) {
+
+    <p>
+      Loading courses...
+    </p>
+
+  }
+
+
+  @if (errorMessage) {
+
+    <p>
+      {{ errorMessage }}
+    </p>
+
+  }
+
+
+  @if (searchTerm) {
+
+    <p class="search-info">
+
+      Search results for:
+
+      <strong>
+        {{ searchTerm }}
+      </strong>
+
+    </p>
+
+  }
+
+
+  <div class="course-count">
+
+    <span>
+      Courses Found
+    </span>
+
+    <strong>
+      {{ courses.length }}
+    </strong>
+
+  </div>
+
+
+  <div class="courses-grid">
+
+    @for (
+      course of courses;
+      track course.id
+    ) {
+
+      <div class="course-wrapper">
+
+        <app-course-card
+          [course]="course">
+        </app-course-card>
+
+
+        <button
+          type="button"
+          class="view-course-button"
+          (click)="viewCourse(course.id)"
+        >
+          View Course
+        </button>
+
+
+        <button
+          type="button"
+          class="delete-course-button"
+          (click)="deleteCourse(course)"
+        >
+          Delete
+        </button>
+
+      </div>
+
+    } @empty {
+
+      @if (!isLoading) {
+
+        <div class="no-results">
+
+          <h3>
+            No courses found
+          </h3>
+
+          <p>
+            No course matches
+            "{{ searchTerm }}".
+          </p>
+
+        </div>
+
+      }
+
+    }
+
+  </div>
+
+</div>

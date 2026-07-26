@@ -1,0 +1,106 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.course-card {
+  height: 100%;
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  padding: 22px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.09);
+}
+
+/* Header */
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.course-code {
+  display: inline-block;
+
+  margin-bottom: 6px;
+
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.card-header h3 {
+  margin: 0;
+
+  color: #1f3b5b;
+
+  font-size: 20px;
+}
+
+/* Course Information */
+
+.course-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+.info-item {
+  padding: 11px;
+
+  background: #f8fafc;
+
+  border-radius: 6px;
+}
+
+.info-label {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #64748b;
+
+  font-size: 11px;
+}
+
+.info-value {
+  color: #263548;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Expanded Details */
+
+.details-section {
+  margin-bottom: 18px;
+
+  padding: 12px 14px;
+
+  background: #f8fafc;
+
+  border-left: 3px solid #1f3b5b;
+  border-radius: 5px;
+}

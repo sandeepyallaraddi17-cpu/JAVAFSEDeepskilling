@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+
+@if (loadingService.isLoading$ | async) {
+
+  <div class="global-loading">
+
+    <div class="spinner"></div>
+
+    <p>
+      Loading...
+    </p>
+
+  </div>
+
+}
+
+
+<router-outlet></router-outlet>
