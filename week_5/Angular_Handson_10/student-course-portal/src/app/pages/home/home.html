@@ -1,0 +1,61 @@
+<div class="home-page">
+
+  <div class="home-header">
+    <h1>Student Course Portal</h1>
+
+    <p>
+      Explore available courses and manage your enrollments.
+    </p>
+  </div>
+
+  <div class="stats-section">
+
+    <div class="stat-card">
+
+      <span class="stat-title">
+        Available Courses
+      </span>
+
+      <strong class="stat-number">
+        {{ availableCourses }}
+      </strong>
+
+      <span class="stat-description">
+        Courses available for enrollment
+      </span>
+
+      <button
+        type="button"
+        class="enroll-now-button"
+        (click)="onEnrollClick()"
+      >
+        Enroll Now
+      </button>
+
+    </div>
+
+  </div>
+
+  <div
+    class="enrollment-message"
+    *ngIf="enrollmentMessage"
+  >
+    {{ enrollmentMessage }}
+  </div>
+
+  <div class="service-section">
+
+    <div class="section-heading">
+      <h2>Course Overview</h2>
+
+      <p>
+        View and manage the courses currently available.
+      </p>
+    </div>
+
+    <app-course-summary-widget>
+    </app-course-summary-widget>
+
+  </div>
+
+</div>

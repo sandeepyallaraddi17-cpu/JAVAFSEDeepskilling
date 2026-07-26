@@ -1,0 +1,101 @@
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+}
+
+.profile-page {
+  max-width: 850px;
+
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.profile-header {
+  text-align: center;
+
+  margin-bottom: 28px;
+}
+
+.profile-header h1 {
+  margin-bottom: 7px;
+
+  color: #1f3b5b;
+}
+
+.profile-header p {
+  color: #64748b;
+}
+
+.enrollment-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 18px;
+
+  border: 1px solid #dce2e8;
+  border-radius: 8px;
+
+  background: #f8fafc;
+}
+
+.enrollment-summary span {
+  color: #475569;
+}
+
+.enrollment-summary strong {
+  padding: 6px 12px;
+
+  border-radius: 5px;
+
+  background: #1f3b5b;
+  color: white;
+}
+
+.empty-state {
+  margin-top: 20px;
+  padding: 25px;
+
+  text-align: center;
+
+  border: 1px dashed #cbd5e1;
+  border-radius: 7px;
+
+  color: #64748b;
+}
+
+.enrolled-list {
+  margin-top: 20px;
+}
+
+.enrolled-course {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 12px;
+  padding: 16px;
+
+  border: 1px solid #dce2e8;
+  border-radius: 7px;
+
+  background: white;
+}
+
+.enrolled-course h3 {
+  margin: 0 0 4px;
+
+  color: #1f3b5b;
+}
+
+.enrolled-course span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.credits {
+  color: #475569;
+
+  font-size: 13px;
+  font-weight: 600;
+}
